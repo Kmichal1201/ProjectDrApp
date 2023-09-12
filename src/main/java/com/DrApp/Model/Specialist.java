@@ -18,12 +18,13 @@ import java.util.Set;
 @Table(name = "specialist")
 public class Specialist {
 
-    public Specialist(String email, String name, String surname, LocalDate dateOfBirth, String pwz) {
+    public Specialist(String email, String name, String surname, LocalDate dateOfBirth, String pwz, String specialization) {
         this.email = email;
         this.name = name;
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
         this.pwz = pwz;
+        this.specialization = specialization;
     }
 
     @Id
