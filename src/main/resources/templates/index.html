@@ -13,9 +13,9 @@
             <i class="fa-regular fa-hospital fa-lg" style="color: #000000;"></i> Witaj w DR App 
           </div>
             <div class="menu">
-                <button><i class="fa-solid fa-user fa-xl" style="color: #000000;"></i><p>Zaloguj się</p></button>
-                <button> <i class="fa-solid fa-id-card fa-xl" style="color: #00040a;"></i><p>Zarejestruj się</p></button>
-                <button><i class="fa-solid fa-user-doctor fa-xl" style="color: #000000;"></i><p>Dla profesjonalistów</p></button>
+                <button th:href="/login"><i class="fa-solid fa-user fa-xl" style="color: #000000;"></i><p>Zaloguj się</p></button>
+                <button th:href="/registerUser"> <i class="fa-solid fa-id-card fa-xl" style="color: #00040a;"></i><p>Zarejestruj się</p></button>
+                <button th:href="/forProfessionals"><i class="fa-solid fa-user-doctor fa-xl" style="color: #000000;"></i><p>Dla profesjonalistów</p></button>
             </div>
             <div class="logged" hidden="hidden"></div>
         </header>

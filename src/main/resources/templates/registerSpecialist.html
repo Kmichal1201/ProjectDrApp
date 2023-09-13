@@ -8,20 +8,29 @@
     <title>DrApp registration</title>
 </head>
 <body>
-<div></div>
+    <header>
+        <div class="welcome-title">
+          <i class="fa-regular fa-hospital fa-lg" style="color: #000000;"></i> DR App 
+        </div>
+          <div class="menu">
+              <button><i class="fa-solid fa-house fa-xl" style="color: #000000;"></i><p>Powrót do strony głównej</p></button>
+          </div>
+          <div class="logged" hidden="hidden"></div>
+      </header>
 <div class="register">
     <form class="register-form" action="#" method="post" th:action = "@{/registerSpecialist/register}" >
         <label class="smile-icon"><i class="fa-solid fa-face-smile-beam fa-2xl" style="color: #00d5ff;"></i></label>
+        <label class="registration-text">Rejestracja specjalisty</label>
         <label>Login użytkownika:</label>
-        <input placeholder="Np. JanKowalski1" type="text" th:field="${user.login}">
+        <input placeholder="Np. DrDolittle123" type="text" th:field="${user.login}">
         <label>Hasło:</label>
         <input placeholder="Wpisz hasło" type="password" th:field="${user.password}">
         <label>Email:</label>
-        <input placeholder="Np. janKowalski1@gmail.com" type="email" th:field="${specialist.email}">
+        <input placeholder="Np. DrHouse@gmail.com" type="email" th:field="${specialist.email}">
         <label>Imię:</label>
         <input placeholder="Wpisz imię" type="text" th:field="${specialist.name}">
         <label>Nazwisko:</label>
-        <input placeholder="Wpisz Nazwisko" type="text" th:field="${specialist.surname}">
+        <input placeholder="Wpisz nazwisko" type="text" th:field="${specialist.surname}">
         <label>PWZ:</label>
         <input placeholder="Wpisz numer PWZ" type="text" th:field="${specialist.pwz}">
         <label>Specjalizacja</label>

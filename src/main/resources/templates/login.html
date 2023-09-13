@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/loginStyle.css">
+    <script src="https://kit.fontawesome.com/8d3830eb12.js" crossorigin="anonymous"></script>
+    <title>DrApp Login</title>
+</head>
+<body>
+    <header>
+        <div class="welcome-title">
+          <i class="fa-regular fa-hospital fa-lg" style="color: #000000;"></i> DR App 
+        </div>
+          <div class="menu">
+              <button><i class="fa-solid fa-house fa-xl" style="color: #000000;"></i><p>Powrót do strony głównej</p></button>
+          </div>
+          <div class="logged" hidden="hidden"></div>
+      </header>
+      <div class="login">
+        <form class="login-form">
+            <label class="login-header">Logowanie <i class="fa-solid fa-face-smile-beam fa-2xl" style="color: #00d5ff;"></i></label>
+            <div class="login-input">
+                <div class="username">
+                    <label>Wpisz nazwę użytkownika:</label>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="password">
+                    <label>Wpisz hasło:</label>
+                    <input type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="login-buttons">
+                <button type="submit"><i class="fa-solid fa-check fa-lg"></i>Zaloguj</button>
+                <button type="reset"><i class="fa-regular fa-circle-xmark"></i>Reset</button>
+
+            </div>
+            
+        </form>
+
+      </div> 
+    
+</body>
+</html>
