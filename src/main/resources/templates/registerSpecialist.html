@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/8d3830eb12.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/registerSpecStyle.css">
+    <link rel="stylesheet" th:href="@{/css/registerSpecStyle.css}" href="/static/css/registerSpecStyle.css">
     <title>DrApp registration</title>
 </head>
 <body>
@@ -13,12 +13,12 @@
           <i class="fa-regular fa-hospital fa-lg" style="color: #000000;"></i> DR App 
         </div>
           <div class="menu">
-              <button><i class="fa-solid fa-house fa-xl" style="color: #000000;"></i><p>Powrót do strony głównej</p></button>
+              <a th:href="@{/home}" href="index.html"><i class="fa-solid fa-house fa-xl" style="color: #000000;"></i><p>Powrót do strony głównej</p></a>
           </div>
           <div class="logged" hidden="hidden"></div>
       </header>
 <div class="register">
-    <form class="register-form" action="#" method="post" th:action = "@{/registerSpecialist/register}" >
+    <form class="register-form" action="#" method="post" th:action = "@{/pro/registerSpecialist/register}" >
         <label class="smile-icon"><i class="fa-solid fa-face-smile-beam fa-2xl" style="color: #00d5ff;"></i></label>
         <label class="registration-text">Rejestracja specjalisty</label>
         <label>Login użytkownika:</label>

@@ -22,9 +22,7 @@ public class UserInfoService {
         userInfoRepo.save(theUserInfo);
     }
 
-    public List<UserInfo>findAll(){
-        return userInfoRepo.findAllBySortBySurname();
-    }
+
 
 
 

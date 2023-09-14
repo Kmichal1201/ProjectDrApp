@@ -2,6 +2,7 @@ package com.DrApp.Model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,9 +27,11 @@ public class AvailableDate {
     @Column(name = "available_date_id")
     private long id;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "availability_date")
     private LocalDate availabilityDate;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "availability_time")
     private List<LocalTime> availabilityTime;
 

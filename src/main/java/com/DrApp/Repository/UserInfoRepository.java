@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface UserInfoRepository extends JpaRepository<UserInfo,Integer> {
 
-    public List<UserInfo> findAllBySortBySurname();
+
 }

@@ -1,6 +1,8 @@
 package com.DrApp.Model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,18 +34,24 @@ public class Specialist {
     @Column(name = "specialist_id")
     private long id;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "email")
     private String email;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "name")
     private String name;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "surname")
     private String surname;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
+    @NotNull(message = "Pole wymagane.")
+    @Size(min = 7, max = 7, message = "Musi zawierać 7 znaków.")
     @Column(name = "pwz")
     private String pwz;
 

@@ -2,6 +2,7 @@ package com.DrApp.Model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.springframework.context.annotation.Lazy;
 
@@ -20,9 +21,11 @@ public class User {
     @Column(name = "user_id")
     private long id;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "login")
     private String login;
 
+    @NotNull(message = "Pole wymagane.")
     @Column(name = "password")
     private String password;
 
@@ -40,7 +43,7 @@ public class User {
     @JoinColumn(name = "specialist_id")
     private Specialist specialist;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToOne(cascade = CascadeType.MERGE, mappedBy = "user")
     private Role role;
 
 }

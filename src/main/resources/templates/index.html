@@ -4,18 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>DRapp Home</title>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" th:href="@{/css/index.css}" href="/static/css/index.css">
         <script src="https://kit.fontawesome.com/8d3830eb12.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/static/script/index.js"></script>
     </head>
     <body>
         <header>
           <div class="welcome-title">
-            <i class="fa-regular fa-hospital fa-lg" style="color: #000000;"></i> Witaj w DR App 
+            <i class="fa-regular fa-hospital fa-lg" style="color: #000000;"></i> Witaj w DR App
           </div>
             <div class="menu">
-                <button th:href="/login"><i class="fa-solid fa-user fa-xl" style="color: #000000;"></i><p>Zaloguj się</p></button>
-                <button th:href="/registerUser"> <i class="fa-solid fa-id-card fa-xl" style="color: #00040a;"></i><p>Zarejestruj się</p></button>
-                <button th:href="/forProfessionals"><i class="fa-solid fa-user-doctor fa-xl" style="color: #000000;"></i><p>Dla profesjonalistów</p></button>
+                <a th:href="@{/login}" href="login.html"><i class="fa-solid fa-user fa-xl" style="color: #000000;"></i><p >Zaloguj się</p></a>
+                <a th:href="@{/user/registerUser}" href="registerUser.html"><i class="fa-solid fa-id-card fa-xl" style="color: #00040a;"></i><p >Zarejestruj się</p></a>
+                <a th:href="@{/pro/forProfessionals}" href="forProfessionals.html"><i class="fa-solid fa-user-doctor fa-xl" style="color: #000000;"></i><p >Dla profesjonalistów</p></a>
             </div>
             <div class="logged" hidden="hidden"></div>
         </header>
@@ -26,7 +27,7 @@
         </div>
         <footer class="footer">
             <p>Kontakt:507 375 677 / mkordasinski@gmail.com</p>
-            <p>Created by Michał Kordasiński</p>
+            <p><i class="fa-brands fa-github fa-lg"></i>Created by Michał Kordasiński</p>
         </footer>
     </body>
 </html>

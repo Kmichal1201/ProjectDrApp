@@ -1,6 +1,6 @@
 body{ 
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/pictures/medical-background-cjge7e89adg6ub8x.jpg);
+    background-image: url(../pictures/medical-background-cjge7e89adg6ub8x.jpg);
     margin: 0;
     padding: 0; 
     width: 100%;
@@ -28,16 +28,25 @@ header {
  text-align: center;
 
 }
-.menu button{
+
+.menu a{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin: 5px;
     border-radius: 10px;
+    border: solid 1px;
     background-color: rgb(255, 255, 255);
+    padding-right: 5px;
+    text-decoration: none;
+    color: black;
 }
-.menu button i{
+.menu a:hover{
+    text-decoration: underline;    
+}
+
+.menu a i{
     padding: 5px;
 }
 .main-desc{
