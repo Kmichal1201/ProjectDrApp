@@ -20,7 +20,7 @@ public class Role {
     private long id;
 
     @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "login")
     private User user;
 
     @Column(name = "authority")
