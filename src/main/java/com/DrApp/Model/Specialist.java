@@ -20,8 +20,8 @@ import java.util.Set;
 @Table(name = "specialist")
 public class Specialist {
 
-    public Specialist(String email, String name, String surname, LocalDate dateOfBirth, String pwz, String specialization) {
-        this.email = email;
+    public Specialist(String name, String surname, LocalDate dateOfBirth, String pwz, String specialization) {
+
         this.name = name;
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
@@ -34,9 +34,6 @@ public class Specialist {
     @Column(name = "specialist_id")
     private long id;
 
-    @NotNull(message = "Pole wymagane.")
-    @Column(name = "email")
-    private String email;
 
     @NotNull(message = "Pole wymagane.")
     @Column(name = "name")

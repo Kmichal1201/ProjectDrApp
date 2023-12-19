@@ -40,6 +40,9 @@ public class UserService {
             throw new RuntimeException("Can't find user");
         }
         return theUser;
+    }
+    public void deleteUser(Integer id){
+        userRepo.deleteById(id);
 
     }
 

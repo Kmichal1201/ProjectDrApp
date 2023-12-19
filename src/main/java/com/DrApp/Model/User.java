@@ -22,16 +22,16 @@ public class User {
     private long id;
 
     @NotNull(message = "Pole wymagane.")
-    @Column(name = "login")
-    private String login;
+    @Column(name = "email")
+    private String email;
 
     @NotNull(message = "Pole wymagane.")
     @Column(name = "password")
     private String password;
 
 
-    public User(String login, String password) {
-        this.login = login;
+    public User(String email, String password) {
+        this.email = email;
         this.password = password;
     }
 

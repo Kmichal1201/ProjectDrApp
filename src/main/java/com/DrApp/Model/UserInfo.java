@@ -25,9 +25,6 @@ public class UserInfo {
     @Column(name = "user_info_id")
     private long id;
 
-    @NotNull(message = "Pole wymagane.")
-    @Column(name = "email")
-    private String email;
 
     @NotNull(message = "Pole wymagane.")
     @Column(name = "name")
@@ -47,8 +44,7 @@ public class UserInfo {
     private LocalDate dateOfBirth;
 
 
-    public UserInfo(String email, String name, String surname, String idNumber, LocalDate dateOfBirth) {
-        this.email = email;
+    public UserInfo(String name, String surname, String idNumber, LocalDate dateOfBirth) {
         this.name = name;
         this.surname = surname;
         this.idNumber = idNumber;
